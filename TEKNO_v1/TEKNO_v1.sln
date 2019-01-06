@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEKNO_v1", "TEKNO_v1\TEKNO_v1.csproj", "{6DB15B5E-9C60-4B15-A1FB-C974428887EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoBD", "AccesoBD\AccesoBD.csproj", "{C0A034EF-C739-4690-BE2B-9AEA14795C81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DB15B5E-9C60-4B15-A1FB-C974428887EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB15B5E-9C60-4B15-A1FB-C974428887EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB15B5E-9C60-4B15-A1FB-C974428887EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB15B5E-9C60-4B15-A1FB-C974428887EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A034EF-C739-4690-BE2B-9AEA14795C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A034EF-C739-4690-BE2B-9AEA14795C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A034EF-C739-4690-BE2B-9AEA14795C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A034EF-C739-4690-BE2B-9AEA14795C81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

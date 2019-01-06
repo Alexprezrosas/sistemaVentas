@@ -1,0 +1,55 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEKNO_v1"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="TEKNO_v1.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Resources>
+            <telerik:IconSources x:Key="IconSources" DarkBasePath="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/Dark/" LightBasePath="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/" ModernBasePath="pack://application:,,,/Telerik.Windows.Controls.RichTextBoxUI;component/Images/MSOffice/Modern/"/>
+            <telerik:FontFamiliesProvider x:Key="FontFamiliesProvider"/>
+            <telerik:EditingContextTypeToBoolConverter x:Key="EditingContextTypeToBoolConverter"/>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="413*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="74*"/>
+        </Grid.ColumnDefinitions>
+        <telerik:RadRadialMenu HorizontalAlignment="Left" IsOpen="True" Margin="122,34,0,0" VerticalAlignment="Top">
+            <telerik:RadRadialMenuItem Header="Clientes" ContentSectorBackground="Bisque" x:Name="menuClientes">
+                <telerik:RadRadialMenuItem Header="Registrar Clientes" ContentSectorBackground="DimGray" 
+                                           Click="RadRadialMenuItem_Click_6" x:Name="menuRegistrarClientes"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Clientes" ContentSectorBackground="Goldenrod" Click="RadRadialMenuItem_Click_7" x:Name="menuVisualizarClientes"/>
+            </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Proveedores" ContentSectorBackground="AliceBlue" x:Name="menuProveedores">
+                <telerik:RadRadialMenuItem Header="Registrar Proveedores" ContentSectorBackground="IndianRed" Click="RadRadialMenuItem_Click_12" x:Name="menuRegistrarProveedores"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Proveedores" ContentSectorBackground="Ivory" Click="RadRadialMenuItem_Click_13" x:Name="menuVisualizarProveedores"/>
+            </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Ventas" ContentSectorBackground="AntiqueWhite" x:Name="Ventas">
+                <telerik:RadRadialMenuItem Header="Registrar Venta Profesores" ContentSectorBackground="LimeGreen" Click="RadRadialMenuItem_Click_8" x:Name="menuRegistrarVentas"/>
+                <telerik:RadRadialMenuItem Header="Registrar Venta Publico General" ContentSectorBackground="Coral" Click="menuRegistrarVentasPublico_Click" x:Name="menuRegistrarVentasPublico"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Ventas" ContentSectorBackground="LightPink" Click="RadRadialMenuItem_Click_9" x:Name="menuVisualizarVentas"/>
+            </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Productos" ContentSectorBackground="Aquamarine" x:Name="menuProductos">
+                <telerik:RadRadialMenuItem Header="Registrar Producto" ContentSectorBackground="IndianRed" Click="RadRadialMenuItem_Click_4" x:Name="menuRegistrarProducto"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Producto" ContentSectorBackground="OldLace" Click="RadRadialMenuItem_Click_5" x:Name="menuVisualizarProductos"/>
+            </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Escuela" ContentSectorBackground="Coral" x:Name="menuEscuelas">
+                <telerik:RadRadialMenuItem Header="Registrar Escuela" Click="RadRadialMenuItem_Click" ContentSectorBackground="Firebrick" x:Name="menuRegistrarEscuela"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Escuela" ContentSectorBackground="Indigo" Click="RadRadialMenuItem_Click_3" x:Name="VisualizarEscuelas"/>
+            </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Usuario" ContentSectorBackground="GreenYellow" x:Name="menuUsuarios">
+                <telerik:RadRadialMenuItem Header="Registrar Usuario" Click="RadRadialMenuItem_Click_1" ContentSectorBackground="LightGray" x:Name="menuRegistrarUsuario"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Usuario" Click="RadRadialMenuItem_Click_2" ContentSectorBackground="AliceBlue" x:Name="menuVisualizarUsuarios"/>
+                <telerik:RadRadialMenuItem Header="Cerra Sesion" Click="RadRadialMenuItem_Click_14"/>
+            </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Compras" ContentSectorBackground="Lavender" x:Name="menuCompras">
+                <telerik:RadRadialMenuItem Header="Registrar Compras" ContentSectorBackground="DarkSalmon" Click="RadRadialMenuItem_Click_10" x:Name="menuRegistrarCompra"/>
+                <telerik:RadRadialMenuItem Header="Visualizar Compras" ContentSectorBackground="Gainsboro" Click="RadRadialMenuItem_Click_11" x:Name="menuVisualizarCompras"/>
+            </telerik:RadRadialMenuItem>
+        </telerik:RadRadialMenu>
+    </Grid>
+</Window>

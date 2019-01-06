@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEKNO_v1.Clientes"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="TEKNO_v1.Clientes.Registro_Clientes"
+        mc:Ignorable="d"
+        Title="Registro_Clientes" Height="405" Width="519">
+    <Grid>
+        <Label x:Name="lblNombre" Content="Nombre del Cliente" HorizontalAlignment="Left" Margin="24,63,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAp_Paterno" Content="Apellido Paterno" HorizontalAlignment="Left" Margin="24,89,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAp_Materno" Content="Apellido Materno" HorizontalAlignment="Left" Margin="24,120,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCorreo" Content="e-mail" HorizontalAlignment="Left" Margin="24,146,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTelefono" Content="Telefono" HorizontalAlignment="Left" Margin="24,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblEscuela" Content="Escuela" HorizontalAlignment="Left" Margin="24,198,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTitulo" Content="Registro de Clientes" HorizontalAlignment="Left" Margin="179,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="txtCliente" HorizontalAlignment="Left" Height="23" Margin="188,67,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="223" BorderThickness="0,0,0,1" Background="AliceBlue" PreviewTextInput="validarLetras"/>
+        <TextBox x:Name="txtPaterno" HorizontalAlignment="Left" Height="23" Margin="188,95,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="223" BorderThickness="0,0,0,1" Background="AliceBlue" PreviewTextInput="validarLetras"/>
+        <TextBox x:Name="txtMaterno" HorizontalAlignment="Left" Height="23" Margin="188,120,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="223" BorderThickness="0,0,0,1" Background="AliceBlue" PreviewTextInput="validarLetras"/>
+        <TextBox x:Name="txtemail" HorizontalAlignment="Left" Height="23" Margin="188,146,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="223" BorderThickness="0,0,0,1" Background="AliceBlue" PreviewTextInput="validarNumLetras"/>
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="23" Margin="188,174,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="223" BorderThickness="0,0,0,1" Background="AliceBlue" PreviewTextInput="validarNumeros"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="118,275,0,0" VerticalAlignment="Top" Width="75" BorderThickness="0,0,0,1" Background="AliceBlue" Click="btnGuardar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="336,275,0,0" VerticalAlignment="Top" Width="75" BorderThickness="0,0,0,1" Background="AliceBlue" Click="btnCancelar_Click"/>
+
+        <telerik:RadAutoCompleteBox x:Name="autoEscuela" HorizontalAlignment="Left" Margin="188,202,0,0" VerticalAlignment="Top" Width="223" BorderThickness="0,0,0,1" Background="AliceBlue"
+                                    ItemsSource="{Binding cliente}"
+                                    DisplayMemberPath="nombre"
+                                    AutoCompleteMode="Suggest"
+                                    SelectionMode="Single"
+                                    PreviewTextInput="validarLetras"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="118,275,0,0" VerticalAlignment="Top" Width="75" BorderThickness="0,0,0,1" Background="AliceBlue" Click="btnActualizar_Click" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

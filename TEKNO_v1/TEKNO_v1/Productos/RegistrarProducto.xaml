@@ -1,0 +1,41 @@
+﻿<Window x:Class="TEKNO_v1.Productos.RegistrarProducto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEKNO_v1.Productos"
+        mc:Ignorable="d"
+        Title="RegistrarProducto" Height="340.317" Width="527.586">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="119" Margin="340,95,0,0" VerticalAlignment="Top" Width="170" Source="/Productos/imagenes/deportes.png"/>
+
+        <Label x:Name="lblProducto" Content="Producto" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDescripcion" Content="Descripcion" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMarca" Content="Marca" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblpreciocompra" Content="Precio Compra" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTitulo" Content="Registro de productos" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="txtProducto" HorizontalAlignment="Left" Height="23" Margin="134,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" PreviewTextInput="validarLetras"/>
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="23" Margin="134,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" PreviewTextInput="validarLetras"/>
+        <TextBox x:Name="txtMarca" HorizontalAlignment="Left" Height="23" Margin="134,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" PreviewTextInput="validarNumLetras"/>
+        <Button x:Name="btnGuardar" Content="Registrar" HorizontalAlignment="Left" Margin="134,279,0,0" VerticalAlignment="Top" Width="75" Click="btnGuardar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="321,279,0,0" VerticalAlignment="Top" Width="75" Click="btnCancelar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="134,279,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="btnActualizar_Click"/>
+        <ComboBox x:Name="cbbAlmacen" HorizontalAlignment="Left" Margin="134,235,0,0" VerticalAlignment="Top" Width="186">
+            <ComboBoxItem Content="Equipo de proteccion"/>
+            <ComboBoxItem Content="Equipo de proteccion contacto"/>
+            <ComboBoxItem Content="Equipo de entrenamiento"/>
+            <ComboBoxItem Content="Equipo safe-t(espuma)"/>
+            <ComboBoxItem Content="Uniformes"/>
+            <ComboBoxItem Content="Accesorios"/>
+            <ComboBoxItem Content="Souvenirs"/>
+            <ComboBoxItem Content="Cintas"/>
+        </ComboBox>
+        <TextBox x:Name="txtpreciocompra" HorizontalAlignment="Left" Height="23" Margin="134,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" KeyDown="validarDecimal"/>
+        <Label x:Name="lblAlmacen" Content="Almacen" HorizontalAlignment="Left" Margin="12,231,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblprecioprofesor" Content="Precio Profesor" HorizontalAlignment="Left" Margin="8,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtprecioprofesor" HorizontalAlignment="Left" Height="23" Margin="134,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" KeyDown="validarDecimal"/>
+        <Label x:Name="lblpreciopublico" Content="Precio Publico" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtpreciopublico" HorizontalAlignment="Left" Height="23" Margin="134,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" KeyDown="validarDecimal"/>
+
+    </Grid>
+</Window>

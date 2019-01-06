@@ -1,0 +1,45 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEKNO_v1.Compras"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="TEKNO_v1.Compras.ConsultarCompras"
+        mc:Ignorable="d"
+        Title="ConsultarCompras" Height="445.2" Width="766.8">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="471*"/>
+            <ColumnDefinition Width="289*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="image" HorizontalAlignment="Left" Height="194" Margin="133.9,197,0,0" VerticalAlignment="Top" Width="152" Source="/TEKNO_v1;component/Productos/imagenes/deportes.png" Grid.Column="1"/>
+
+
+
+
+
+        <Label x:Name="lblTitulo" Content="Consultar Compras" HorizontalAlignment="Left" Margin="291,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+
+        <telerik:RadGridView HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="347" Width="590" 
+        x:Name="radGridCompras" AutoGenerateColumns="False"
+        SelectedItem="{Binding id_producto}"
+        ShowSearchPanel="False"
+        IsSearchingDeferred="True" Background="AliceBlue" Grid.ColumnSpan="2"
+                             >
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding proveedor}" Header="PROVEEDORr" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding total}" Header="TOTAL"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding fecha}" Header="FECHA"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding usuario}" Header="USUARIO"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="157.9,107,0,0" VerticalAlignment="Top" Width="128" Click="btnEditar_Click" Grid.Column="1"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="157.9,145,0,0" VerticalAlignment="Top" Width="128" Click="btnEliminar_Click" Grid.Column="1"/>
+
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEKNO_v1.Usuarios"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="TEKNO_v1.Usuarios.Consultar_Usuario"
+        mc:Ignorable="d"
+        Title="Consultar_Usuario" Height="430.493" Width="773.298">
+    <Grid>
+        <Label x:Name="lblTitulo" Content="Consultar Usuario" HorizontalAlignment="Left" Margin="291,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+
+        <telerik:RadGridView HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="347" Width="614" 
+                             x:Name="radUsuario" AutoGenerateColumns="False"
+                             Grid.Column="1"
+                             SelectedItem="{Binding id_usuario}"
+                             ShowSearchPanel="False"
+                             IsSearchingDeferred="True" Background="AliceBlue"
+                             >
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding nombre}" Header="NOMBRE" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding ap_paterno}" Header="APELLIDO PATERNO"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding ap_materno}" Header="APELLIDO MATERNO"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding password}" Header="CONTRASEÑA"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding puesto}" Header="PUESTO"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="629,107,0,0" VerticalAlignment="Top" Width="128" Click="btnEditar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="629,145,0,0" VerticalAlignment="Top" Width="128" Click="btnEliminar_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="174" Margin="629,197,0,0" VerticalAlignment="Top" Width="128" Source="/Usuarios/imagenes/usuario.png"/>
+
+
+
+
+
+    </Grid>
+</Window>

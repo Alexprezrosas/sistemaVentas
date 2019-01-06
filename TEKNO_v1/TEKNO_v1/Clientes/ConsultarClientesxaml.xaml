@@ -1,0 +1,43 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEKNO_v1.Clientes"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="TEKNO_v1.Clientes.ConsultarClientesxaml"
+        mc:Ignorable="d"
+        Title="ConsultarClientesxaml" Height="444" Width="764.4">
+    <Grid>
+
+        <Image x:Name="image" HorizontalAlignment="Left" Height="168" Margin="629,208,0,0" VerticalAlignment="Top" Width="121" Source="/TEKNO_v1;component/Clientes/imagenes/clientes.png"/>
+
+
+
+
+
+        <Label x:Name="lblTitulo" Content="Consultar Clientes" HorizontalAlignment="Left" Margin="291,10,-128.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+
+        <telerik:RadGridView HorizontalAlignment="Left" Margin="10,44,-330.4,-120.6" VerticalAlignment="Top" Height="347" Width="614" 
+        x:Name="radGridClientes" AutoGenerateColumns="False"
+        SelectedItem="{Binding id_cliente}"
+        ShowSearchPanel="False"
+        IsSearchingDeferred="True" Background="AliceBlue"
+                             >
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding nombre}" Header="CLIENTE" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding ap_paterno}" Header="APELLIDO PATERNO" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding ap_materno}" Header="APELLIDO MATERNO" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding correoelectronico}" Header="E-MAIL" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding telefono}" Header="TELEFONO" Background="AliceBlue"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding escuela}" Header="ESCUELA"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="629,107,-463.4,0" VerticalAlignment="Top" Width="128" Click="btnEditar_Click" BorderThickness="0,0,0,1" Background="AliceBlue"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="629,145,-463.4,0" VerticalAlignment="Top" Width="128" Click="btnEliminar_Click" BorderThickness="0,0,0,1" Background="AliceBlue"/>
+
+
+
+
+
+    </Grid>
+</Window>
