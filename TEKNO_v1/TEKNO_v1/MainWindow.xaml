@@ -50,6 +50,9 @@
                 <telerik:RadRadialMenuItem Header="Registrar Compras" ContentSectorBackground="DarkSalmon" Click="RadRadialMenuItem_Click_10" x:Name="menuRegistrarCompra"/>
                 <telerik:RadRadialMenuItem Header="Visualizar Compras" ContentSectorBackground="Gainsboro" Click="RadRadialMenuItem_Click_11" x:Name="menuVisualizarCompras"/>
             </telerik:RadRadialMenuItem>
+            <telerik:RadRadialMenuItem Header="Devoluciones" ContentSectorBackground="Sienna" x:Name="menuDevoluviones">
+                <telerik:RadRadialMenuItem Header="Registrar Devolucion" ContentSectorBackground="DarkSalmon" Click="menuRegistrarDevolucion_Click" x:Name="menuRegistrarDevolucion"/>
+            </telerik:RadRadialMenuItem>
         </telerik:RadRadialMenu>
     </Grid>
 </Window>

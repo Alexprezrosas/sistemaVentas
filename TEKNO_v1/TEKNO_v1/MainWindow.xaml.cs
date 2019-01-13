@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TEKNO_v1.Clientes;
 using TEKNO_v1.Compras;
+using TEKNO_v1.Devoluciones;
 using TEKNO_v1.Escuelas;
 using TEKNO_v1.Login;
 using TEKNO_v1.Productos;
@@ -75,6 +76,10 @@ namespace TEKNO_v1
                 menuVisualizarCompras.Visibility = Visibility.Hidden;
                 menuVisualizarCompras.IsEnabled = false;
 
+                menuDevoluviones.Visibility = Visibility.Hidden;
+                menuDevoluviones.IsEnabled = false;
+                menuRegistrarDevolucion.Visibility = Visibility.Hidden;
+                menuRegistrarDevolucion.IsEnabled = false;
 
             }
         }
@@ -174,6 +179,12 @@ namespace TEKNO_v1
         {
             RegistroVentasPublico rp = new RegistroVentasPublico(idus);
             rp.Show();
+        }
+
+        private void menuRegistrarDevolucion_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        {
+            NuevaDevolucion nd = new NuevaDevolucion();
+            nd.Show();
         }
     }
 }
